@@ -10,8 +10,8 @@
 	<body>
 		<!-- Header -->
 		<!-- nav -->
-		<nav>
-			<div class="nav">
+		<nav class="nav">
+			<div class="nav_left">
 				<a href="index.html">
 					<img src="./data/logo.svg" alt="logo netflix" class="nav_logo" />
 				</a>
@@ -29,7 +29,9 @@
 					<button class="banner_button">Play</button>
 					<button class="banner_button">My List</button>
 				</div>
-				<p id="banner_description"></p>
+				<div class="banner_desc">
+					<p id="banner_description"></p>
+				</div>
 			</div>
 			<div id="banner_fadeBottom"></div>
 		</header>
@@ -42,11 +44,11 @@
 			</div>
 		</div>
 
-		<!-- <script>
+		<script>
 			window.addEventListener("scroll", function () {
 				var nav = document.querySelector("nav");
 				nav.classList.toggle("active", window.scrollY > 0);
 			});
-		</script> -->
+		</script>
 	</body>
 </html>

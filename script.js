@@ -42,7 +42,7 @@ fetch(requests.fetchNetflixOriginals)
 		var banner_desc = document.getElementById("banner_description");
 
 		banner.style.backgroundImage = "url(" + banner_url + setMovie.backdrop_path + ")";
-		banner_desc.style.innerText = truncate(setMovie.overview, 150);
+		banner_desc.innerText = truncate(setMovie.overview, 150);
 		banner_title.innerText = setMovie.name;
 
 		// movie row
@@ -73,6 +73,8 @@ fetch(requests.fetchNetflixOriginals)
 			poster.id = s;
 
 			poster.src = img_url + movie.poster_path;
+			poster.alt = movie.title ? movie.title : movie.name;
+			poster.title = movie.title ? movie.title : movie.name;
 			row_posters.appendChild(poster);
 		});
 	});
@@ -112,7 +114,15 @@ fetch(requests.fetchTrending)
 			poster.id = s2;
 
 			poster.src = img_url + movie.poster_path;
+			poster.alt = movie.title ? movie.title : movie.name;
+			poster.title = movie.title ? movie.title : movie.name;
+			// TEST
+			const overview = document.createElement("h3");
+			overview.innerText = truncate(movie.overview, 150);
+
+			// TEST
 			row_posters.appendChild(poster);
+			// console.log(poster);
 		});
 	});
 
@@ -149,11 +159,14 @@ fetch(requests.fetchActionMovies)
 			poster.id = s2;
 
 			poster.src = img_url + movie.poster_path;
+
+			poster.alt = movie.title ? movie.title : movie.name;
+			poster.title = movie.title ? movie.title : movie.name;
 			row_posters.appendChild(poster);
 		});
 	});
 
-// fetchFantasyMovies
+// Fantasy Movies
 fetch(requests.fetchFantasyMovies)
 	.then((res) => res.json())
 	.then((data) => {
@@ -185,11 +198,13 @@ fetch(requests.fetchFantasyMovies)
 			poster.id = s2;
 
 			poster.src = img_url + movie.poster_path;
+			poster.alt = movie.title ? movie.title : movie.name;
+			poster.title = movie.title ? movie.title : movie.name;
 			row_posters.appendChild(poster);
 		});
 	});
 
-// fetchAnimationMovies
+// Animation Movies
 fetch(requests.fetchAnimationMovies)
 	.then((res) => res.json())
 	.then((data) => {
@@ -221,11 +236,13 @@ fetch(requests.fetchAnimationMovies)
 			poster.id = s2;
 
 			poster.src = img_url + movie.poster_path;
+			poster.alt = movie.title ? movie.title : movie.name;
+			poster.title = movie.title ? movie.title : movie.name;
 			row_posters.appendChild(poster);
 		});
 	});
 
-// fetchComedyMovies
+// Comedy Movies
 fetch(requests.fetchComedyMovies)
 	.then((res) => res.json())
 	.then((data) => {
@@ -257,11 +274,13 @@ fetch(requests.fetchComedyMovies)
 			poster.id = s2;
 
 			poster.src = img_url + movie.poster_path;
+			poster.alt = movie.title ? movie.title : movie.name;
+			poster.title = movie.title ? movie.title : movie.name;
 			row_posters.appendChild(poster);
 		});
 	});
 
-// fetchHorrorMovies
+// Horror Movies
 fetch(requests.fetchHorrorMovies)
 	.then((res) => res.json())
 	.then((data) => {
@@ -293,11 +312,13 @@ fetch(requests.fetchHorrorMovies)
 			poster.id = s2;
 
 			poster.src = img_url + movie.poster_path;
+			poster.alt = movie.title ? movie.title : movie.name;
+			poster.title = movie.title ? movie.title : movie.name;
 			row_posters.appendChild(poster);
 		});
 	});
 
-// fetchRomanceMovies
+// Romance Movies
 fetch(requests.fetchRomanceMovies)
 	.then((res) => res.json())
 	.then((data) => {
@@ -329,11 +350,13 @@ fetch(requests.fetchRomanceMovies)
 			poster.id = s2;
 
 			poster.src = img_url + movie.poster_path;
+			poster.alt = movie.title ? movie.title : movie.name;
+			poster.title = movie.title ? movie.title : movie.name;
 			row_posters.appendChild(poster);
 		});
 	});
 
-// fetchDocumentaries
+// Documentaries
 fetch(requests.fetchDocumentaries)
 	.then((res) => res.json())
 	.then((data) => {
@@ -365,6 +388,8 @@ fetch(requests.fetchDocumentaries)
 			poster.id = s2;
 
 			poster.src = img_url + movie.poster_path;
+			poster.alt = movie.title ? movie.title : movie.name;
+			poster.title = movie.title ? movie.title : movie.name;
 			row_posters.appendChild(poster);
 		});
 	});
