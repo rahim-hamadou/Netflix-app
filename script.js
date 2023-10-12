@@ -34,6 +34,28 @@ fetch(requests.fetchNetflixOriginals)
 	.then((data) => {
 		// console.log(data.results);
 		// change movie on every refresh
+		// TEST REFRESH AUTO via fonction de choix aleatoire
+		const listMovies = data.results;
+		// console.log(listMovies);
+		function chooseRandomElement(array) {
+			const interval = 5000; // 5 secondes en millisecondes
+			let currentIndex = Math.floor(Math.random() * array.length);
+
+			function getRandomElement() {
+				const randomElement = array[currentIndex];
+				console.log("Élément choisi aléatoirement :", randomElement);
+				currentIndex = (currentIndex + 1) % array.length;
+			}
+
+			getRandomElement(); // Choisissez un élément aléatoirement immédiatement
+
+			setInterval(getRandomElement, interval); // Choisissez un élément toutes les 5 secondes
+		}
+		// test de la fn
+		// chooseRandomElement(listMovies);
+
+		// const Lefilm = chooseRandomElement(listMovies);
+		// console.log(Lefilm);
 
 		const setMovie = data.results[Math.floor(Math.random() * data.results.length - 1)];
 		// console.log(setMovie);
