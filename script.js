@@ -2,7 +2,7 @@
 
 // import api from "./.gitignore ";
 
-const api = "api_key=8d567a8d883eaafa5ad118f2c802b560";
+const api = "api_key=a61a1c79b6bb7b222998cd058f6de193";
 
 // base url of the site
 const base_url = "https://api.themoviedb.org/3";
@@ -35,22 +35,24 @@ fetch(requests.fetchNetflixOriginals)
 		// console.log(data.results);
 		// change movie on every refresh
 		// TEST REFRESH AUTO via fonction de choix aleatoire
-		const listMovies = data.results;
+		// const listMovies = data.results;
 		// console.log(listMovies);
-		function chooseRandomElement(array) {
-			const interval = 5000; // 5 secondes en millisecondes
-			let currentIndex = Math.floor(Math.random() * array.length);
+		// function chooseRandomElement(array) {
+		// 	const interval = 5000; // 5 secondes en millisecondes
+		// 	let currentIndex = Math.floor(Math.random() * array.length);
 
-			function getRandomElement() {
-				const randomElement = array[currentIndex];
-				console.log("Élément choisi aléatoirement :", randomElement);
-				currentIndex = (currentIndex + 1) % array.length;
-			}
+		// 	function getRandomElement() {
+		// 		const randomElement = array[currentIndex];
+		// 		console.log("Élément choisi aléatoirement :", randomElement);
+		// 		currentIndex = (currentIndex + 1) % array.length;
+		// 	}
 
-			getRandomElement(); // Choisissez un élément aléatoirement immédiatement
+		// 	getRandomElement();
+		// 	// Choisissez un élément aléatoirement immédiatement
 
-			setInterval(getRandomElement, interval); // Choisissez un élément toutes les 5 secondes
-		}
+		// 	setInterval(getRandomElement, interval);
+		// 	// Choisissez un élément toutes les 5 secondes
+		// }
 		// test de la fn
 		// chooseRandomElement(listMovies);
 
