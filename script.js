@@ -2,7 +2,7 @@
 
 // import api from "./.gitignore ";
 
-const api = "api_key=a61a1c79b6bb7b222998cd058f6de193";
+const api = "api_key=49aba737ea3fc30fb4dc619b8aeee0ef";
 
 // base url of the site
 const base_url = "https://api.themoviedb.org/3";
