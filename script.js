@@ -1,8 +1,6 @@
 // API key from TMBD
 
-// import api from "./.gitignore ";
-
-const api = "api_key=49aba737ea3fc30fb4dc619b8aeee0ef";
+const api = "api_key=1c236c7ef2d746b23391f6c3e7014028";
 
 // base url of the site
 const base_url = "https://api.themoviedb.org/3";
@@ -32,35 +30,7 @@ function truncate(str, n) {
 fetch(requests.fetchNetflixOriginals)
 	.then((res) => res.json())
 	.then((data) => {
-		// console.log(data.results);
-		// change movie on every refresh
-		// TEST REFRESH AUTO via fonction de choix aleatoire
-		// const listMovies = data.results;
-		// console.log(listMovies);
-		// function chooseRandomElement(array) {
-		// 	const interval = 5000; // 5 secondes en millisecondes
-		// 	let currentIndex = Math.floor(Math.random() * array.length);
-
-		// 	function getRandomElement() {
-		// 		const randomElement = array[currentIndex];
-		// 		console.log("Élément choisi aléatoirement :", randomElement);
-		// 		currentIndex = (currentIndex + 1) % array.length;
-		// 	}
-
-		// 	getRandomElement();
-		// 	// Choisissez un élément aléatoirement immédiatement
-
-		// 	setInterval(getRandomElement, interval);
-		// 	// Choisissez un élément toutes les 5 secondes
-		// }
-		// test de la fn
-		// chooseRandomElement(listMovies);
-
-		// const Lefilm = chooseRandomElement(listMovies);
-		// console.log(Lefilm);
-
 		const setMovie = data.results[Math.floor(Math.random() * data.results.length - 1)];
-		// console.log(setMovie);
 		var banner = document.getElementById("banner");
 		var banner_title = document.getElementById("banner_title");
 		var banner_desc = document.getElementById("banner_description");
